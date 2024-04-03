@@ -28,7 +28,7 @@ void printGrid(bool grid[][SIZE])
         {
             cout << (grid[i][j] ? "*" : " ");
         }
-        cout << std::endl;
+        cout << endl;
     }
 }
 
@@ -74,7 +74,7 @@ int main()
     omp_set_num_threads(NUM_THREADS); 
     for (int generation = 0; generation < 100; ++generation) 
     {
-        auto start = std::chrono::steady_clock::now(); 
+        auto start = chrono::steady_clock::now(); 
 #pragma omp parallel for schedule(static)
         for (int i = 0; i < SIZE; ++i) 
         {
